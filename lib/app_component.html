@@ -1,4 +1,10 @@
+import 'product.dart;'
+
 <h1>{{title}}</h1>
-<h2>{{product.name}}</h2>
-<div><label>id:</label>{{product.id}}</div>
-<div><label>name:</label>{{product.name}}</div>
+<h2>product</h2>
+<ul class ="products">
+    <li *ngFor="let product of products">
+        <span class="badge">{{product.id}}</span> {{product.name}}
+    </li>
+
+</ul>
