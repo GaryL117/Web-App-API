@@ -5,7 +5,8 @@ import 'package:angular_app/src/product.dart';
 @Component(
   selector: 'my-app',
   templateUrl: 'app_component.html',
- directives: [coreDirectives],
+  directives: [coreDirectives],
+  styleUrls: ['app_component.css'],
 
 )
 class AppComponent {
