@@ -12,4 +12,7 @@ import 'package:angular_app/src/product.dart';
 class AppComponent {
  final title = 'RenoRun Products and Orders';
  List<Product> products = mockProducts;
+ Product selected;
+ void onSelect(Product product) => selected = product;
 }
+

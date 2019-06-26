@@ -1,8 +1,8 @@
 import 'product.dart';
 
 final mockProducts = <Product>[
-  Product(11, 'Soft 2000'),
-  Product(12, 'Auburn Oak'),
+  Product(11, 'Chair +9000'),
+  Product(12, 'Soft 2000'),
   Product(13, 'Walnut Oak'),
   Product(14, 'Exotic Oak'),
   Product(15, 'Auburn Ash'),
