@@ -1,15 +1,12 @@
+
 <h1>{{title}}</h1>
 <h2><u>Products:</u></h2>
 <ul class ="products">
-    <li *ngFor="let product of products"
-        (click)="onSelect(product)">
+    <li (click)="onSelect(product)"
+        *ngFor="let product of products"
+        [class.selected]="product === selected">
         <span class="badge">{{product.id}}</span> {{product.name}}
     </li>
 
 </ul>
-<div *ngIf="selected != null">
-<h2>{{selected.name}}</h2>
-<div><label>id:</label>{{selected.id}}</div>
-
-    <div><label>name:</label>{{selected.name}}</div>
- </div>
+<my-product [product]="selected"></my-product>
