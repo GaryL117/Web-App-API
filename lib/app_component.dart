@@ -2,17 +2,21 @@ import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 import 'src/product_service.dart';
 import 'src/routes.dart';
+import 'src/product_list_component.dart';
 
 @Component(
   selector: 'my-app',
-  template: """
+  template: '''
   <h1>{{title}}</h1>
   <nav>
+  <a [routerLink]="RoutePaths.dashboard.toUrl()"
+     [routerLinkActive]="'active'">Dashboard</a>
+  
   <a [routerLink]="RoutePaths.products.toUrl()"
      [routerLinkActive]="'active'">Products</a>
   </nav>
-  <router-outlet [routes]="Routes.all"> </router-outlet>
-  """,
+  <router-outlet [routes]="Routes.all"></router-outlet>
+  ''',
   exports: [RoutePaths, Routes],
   directives: [routerDirectives],
   providers: [ClassProvider(ProductService)],
