@@ -1,32 +1,22 @@
 import 'package:angular/angular.dart';
-import 'package:angular_app/src/mock_products.dart';
-import 'package:angular_app/src/product.dart';
-import 'src/product_component.dart';
+import 'package:angular_router/angular_router.dart';
 import 'src/product_service.dart';
+import 'src/routes.dart';
+
 @Component(
   selector: 'my-app',
-  templateUrl: 'app_component.html',
-  directives: [coreDirectives, ProductComponent],
-  styleUrls: ['app_component.css'],
+  template: """
+  <h1>{{title}}</h1>
+  <nav>
+  <a [routerLink]="RoutePaths.products.toUrl()"
+     [routerLinkActive]="'active'">Products</a>
+  </nav>
+  <router-outlet [routes]="Routes.all"> </router-outlet>
+  """,
+  exports: [RoutePaths, Routes],
+  directives: [routerDirectives],
   providers: [ClassProvider(ProductService)],
 )
-class AppComponent implements OnInit{
- final title = 'RenoRun Products and Orders';
- final ProductService _productService;
- List<Product> products;
- Product selected;
- void onSelect(Product product) => selected = product;
-
-
- AppComponent(this._productService);
-
- Future<void> _getProducts() async {
-   products = (await _productService.getAll());
-
- }
-
- void ngOnInit() => _getProducts();
+class AppComponent {
+  final title = "RenoRun Products and Orders";
 }
-
-
-
