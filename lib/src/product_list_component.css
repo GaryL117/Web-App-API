@@ -1,6 +1,6 @@
 .selected {
     background-color: #999;
-    color: whitesmoke;
+    color: #f15822;
 }
 
 .products{
@@ -9,7 +9,12 @@
     padding: 0;
     width: 15em;
 }
-
+h2 {
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #f15822;
+}
 .products li {
     cursor: pointer;
     position: relative;
@@ -22,7 +27,7 @@
 }
 
 .products li.selected:hover {
-    color: whitesmoke;
+    color: #f15822;
 }
 
 .products li:hover {
@@ -49,4 +54,22 @@
     height: 1.8em;
     margin-right: .8em;
     border-radius: 4px 0 0  4px;
+}
+
+button {
+    margin-top: .5em;
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer; cursor: hand;
+}
+button:hover {
+    background-color: whitesmoke;
+    color: #f15822;
+}
+button:disabled {
+    background-color: #999;
+    color: #ccc;
+    cursor: auto;
 }
