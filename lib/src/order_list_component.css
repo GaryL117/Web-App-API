@@ -1,0 +1,78 @@
+.selected {
+    background-color: #999;
+    color: #f15822;
+}
+
+.orders{
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+}
+h2 {
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: #f15822;
+}
+.orders li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: whitesmoke;
+    margin: .5em;
+    padding: 1em;
+    height: 2em;
+    border-radius: 0;
+
+}
+
+.orders li.selected:hover {
+    color: #f15822;
+}
+
+.orders li:hover {
+    color: #f15822;
+    background-color: whitesmoke;
+    left: .1em;
+}
+
+.orders .text {
+    position: relative;
+
+
+}
+
+.orders .badge {
+    display: inline-block;
+    font-size: small;
+    color: whitesmoke;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #f15822;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0  4px;
+}
+
+button {
+    margin-top: .5em;
+    font-family: Arial;
+    background-color: #eee;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer; 
+    cursor: hand;
+}
+button:hover {
+    background-color: whitesmoke;
+    color: #f15822;
+}
+button:disabled {
+    background-color: #999;
+    color: #ccc;
+    cursor: auto;
+}
