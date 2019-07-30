@@ -6,6 +6,7 @@ class RoutePaths {
   static final products = RoutePath(path: 'products');
   static final dashboard = RoutePath(path: 'dashboard');
   static final product = RoutePath(path: '${products.path}/:$idParam');
+  static final order = RoutePath(path: 'orders');
 }
 
 int getId(Map<String, String> parameters) {
