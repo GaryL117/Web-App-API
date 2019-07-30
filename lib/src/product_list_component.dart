@@ -36,24 +36,13 @@ class ProductListComponent implements OnInit {
   Future<void> _getProducts() async {
     Response _products = await http.get('http://127.0.0.1:5000/products');
     data = jsonDecode(_products.body);
-    Data_Org = Product(data[0]['id'] as int, data[0]['name'], data[0]['description'], (data[0]['price']) as double);
-    Data_Org2 = Product(data[1]['id'] as int, data[1]['name'], data[1]['description'], (data[1]['price']) as double);
+    Data_Org = Product(data[0]['id'] as int, data[0]['name'], data[0]['description'], data[0]['price']);
+    Data_Org2 = Product(data[1]['id'] as int, data[1]['name'], data[1]['description'], data[1]['price']);
 
-//    List<Product> data = [
-//      Product(
-//          int.parse('id'),
-//          'name',
-//          'description',
-//          double.parse('price'))
-//    ];
     print(data);
     print(data.runtimeType);
 
 
-
-
-
-//    products = (await _productService.getAll());
   }
     void ngOnInit() => _getProducts();
 
