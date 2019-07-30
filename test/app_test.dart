@@ -1,6 +1,6 @@
+import 'package:angular_app/app_component.dart';
 @TestOn('browser')
 
-import 'package:angular_app/product_list_component.dart';
 import 'package:angular_app/app_component.template.dart' as ng;
 import 'package:angular_test/angular_test.dart';
 import 'package:test/test.dart';
@@ -21,7 +21,7 @@ void main() {
   });
 
   test('Greet world', () async {
-    await fixture.update((c) => c.name = 'World');
+    await fixture.update((c) => c.nme = 'World');
     expect(fixture.text, 'Hello World');
   });
 

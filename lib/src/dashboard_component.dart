@@ -21,7 +21,7 @@ class DashboardComponent implements OnInit {
 
   @override
   void ngOnInit() async {
-    products = (await _productService.getAll()).skip(1).take(4).toList();
+   // products = (await _productService.getAll()).take(2).toList();
   }
 
 }

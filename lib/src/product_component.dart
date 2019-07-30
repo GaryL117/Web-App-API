@@ -22,12 +22,13 @@ class ProductComponent implements OnActivate {
   @override
   void onActivate(_, RouterState current) async {
     final id = getId(current.parameters);
-    if (id != null) product = await (_productService.get(id));
+//    if (id != null) product = await (_productService.get(id));
 
   }
 
   void goBack() => _location.back();
 
   }
+
 
 

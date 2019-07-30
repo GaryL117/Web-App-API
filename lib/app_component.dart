@@ -2,7 +2,7 @@ import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
 import 'src/product_service.dart';
 import 'src/routes.dart';
-import 'src/product_list_component.dart';
+
 
 @Component(
   selector: 'my-app',
@@ -14,6 +14,10 @@ import 'src/product_list_component.dart';
   
   <a [routerLink]="RoutePaths.products.toUrl()"
      [routerLinkActive]="'active'">Products</a>
+     
+  <a [routerLink]="RoutePaths.order.toUrl()"
+     [routerLinkActive]="'active'">Orders</a>
+  
   </nav>
   <router-outlet [routes]="Routes.all"></router-outlet>
   ''',
@@ -23,4 +27,6 @@ import 'src/product_list_component.dart';
 )
 class AppComponent {
   final title = "RenoRun Products and Orders";
+
+  String nme;
 }
